@@ -379,6 +379,7 @@ section{
     color: var(--text-grey);
     text-decoration: none;
 }
+
 .footer_wrapper .link-widget li a,
 .footer_wrapper p {
     color: var(--text-grey);
@@ -395,4 +396,8 @@ section{
     left: 0;
     top: 50%;
     transform: translateY(-50%);
+}
+.footer_wrapper .link-widget li a:hover {
+    color: var(--secondary-color);
+    padding-left: 2.5rem;
 }
