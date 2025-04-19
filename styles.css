@@ -379,7 +379,6 @@ section{
     color: var(--text-grey);
     text-decoration: none;
 }
-
 .footer_wrapper .link-widget li a,
 .footer_wrapper p {
     color: var(--text-grey);
@@ -388,7 +387,6 @@ section{
     position: relative;
     transition: all 0.3s ease-out;
 }
-
 .footer_wrapper .link-widget li a::before {
     content: '\f105';
     font-family: 'Font Awesome 5 Free';
