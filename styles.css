@@ -298,7 +298,7 @@ section{
     width: 100%;
     padding: 0 15px;
     margin: 0 auto;
-}
+} 
 /* h2 {
     color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
@@ -314,6 +314,7 @@ section{
     gap: 2rem;
     padding: 20px 0;
 }
+  
 .sliders div {
     height: 500px;
     width: 120px;
@@ -387,6 +388,7 @@ section{
     position: relative;
     transition: all 0.3s ease-out;
 }
+
 .footer_wrapper .link-widget li a::before {
     content: '\f105';
     font-family: 'Font Awesome 5 Free';
@@ -396,7 +398,80 @@ section{
     top: 50%;
     transform: translateY(-50%);
 }
+
 .footer_wrapper .link-widget li a:hover {
     color: var(--secondary-color);
     padding-left: 2.5rem;
+}
+
+.footer_wrapper .social-network a {
+    width: 3.5rem;
+    height: 3.5rem;
+    line-height: 3.2rem;
+    margin: 0.5rem;
+    display: inline-block;
+    text-align: center;
+    border-radius: 100%;
+    color: var(--text-grey);
+    border: 0.125rem solid var(--text-grey);
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.footer_wrapper .social-network a:hover {
+    border-color: var(--secondary-color);
+    background-color: var(--secondary-color);
+    color: var(--text-white);
+    box-shadow: 0 0.625rem 0.9375rem rgba(0, 0, 0, 0.1);
+    transform: translateY(-0.1875rem);
+}
+.footer_wrapper .form-control {
+    font-size: 2rem;
+    color: var(--text-white);
+    background-color: transparent;
+    border: 1px solid var(--secondary-color);
+}
+
+.footer_wrapper .form-control:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: var(--secondary-color);
+}
+
+.footer_wrapper .copyright-section {
+    background-color: var(--secondary-color);
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.footer_wrapper .copyright-section p {
+    margin: 0;
+    line-height: 1.5;
+    padding: 3rem 0;
+    font-size: 1.4rem;
+    color: var(--text-white);
+}
+
+.footer_wrapper .copyright-section a {
+    color: var(--primary-text);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 5rem;
+    padding-left: 46rem;
+}
+.products .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.products .box-container .box{
+    flex: 1 1 30rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+    border: 0.1rem solid rgba(0,0,0,.1);
+    position: relative;
 }
