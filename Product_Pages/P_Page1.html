@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Multi-Function Home Gym Machine - GymPro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="product_page1.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <a href="#" class="logo">GymPro</a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Reviews</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="product-section">
+      <section class="product-images">
+        <div class="main-image">
+          <img id="main-product-image" src="/api/placeholder/500/400" alt="Multi-Function Home Gym Machine">
+        </div>
+        <div class="thumbnail-container">
+          <img class="thumbnail active" src="/api/placeholder/80/80" alt="Black color thumbnail">
+          <img class="thumbnail" src="/api/placeholder/80/80" alt="Red color thumbnail">
+          <img class="thumbnail" src="/api/placeholder/80/80" alt="Blue color thumbnail">
+        </div>
+      </section>
+
+      <section class="product-details">
+        
+        <h1>Multi-Function Home Gym Machine</h1>
+        <div class="product-rating">
+          <span class="stars">
+            <i class="fa fa-star"></i><i class="fa fa-star"></i>
+            <i class="fa fa-star"></i><i class="fa fa-star"></i>
+            <i class="fa fa-star-half-alt"></i>
+          </span>
+          <span>4.5 (128 reviews)</span>
+        </div>
+        <div class="product-price">
+          <span class="current-price">$299</span>
+          <span class="old-price">$349</span>
+        </div>
+
+        <div class="product-colors">
+          <h3>Color</h3>
+          <div class="color-options">
+            <div class="color-option selected" data-color="Black" style="background: #222;" aria-label="Black"></div>
+            <div class="color-option" data-color="Red" style="background: #d32f2f;" aria-label="Red"></div>
+            <div class="color-option" data-color="Blue" style="background: #1976d2;" aria-label="Blue"></div>
+          </div>
+          <div class="selected-color">Selected: <strong>Black</strong></div>
+        </div>
+
+        <div class="product-quantity">
+          <h3>Quantity</h3>
+          <div class="quantity-selector">
+            <button id="decrease-quantity" aria-label="Decrease quantity">-</button>
+            <input type="number" id="quantity" value="1" min="1" aria-label="Quantity">
+            <button id="increase-quantity" aria-label="Increase quantity">+</button>
+          </div>
+        </div>
+
+        <div class="product-actions">
+          <button class="add-to-cart-btn">Add to Cart</button>
+          <button class="wishlist-btn" aria-label="Add to wishlist"><i class="fa fa-heart"></i></button>
+          <button class="share-btn" aria-label="Share product"><i class="fa fa-share-alt"></i></button>
+        </div>
+
+        <div class="trust-badges">
+          <div>
+            <i class="fa fa-lock fa-2x"></i>
+            <p>Secure Payment</p>
+          </div>
+          <div>
+            <i class="fa fa-truck fa-2x"></i>
+            <p>Free Shipping</p>
+          </div>
+          <div>
+            <i class="fa fa-shield-alt fa-2x"></i>
+            <p>2-Year Warranty</p>
+          </div>
+        </div>
+      </section>
+    </main>
