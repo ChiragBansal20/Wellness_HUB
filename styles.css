@@ -272,6 +272,8 @@ section{
     z-index: 999;
     transition: 0.3s all ease-in-out;
 }
+
+
 .banner-section{
     background: url(Black.jpg); 
     background-repeat: no-repeat;
