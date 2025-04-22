@@ -50,3 +50,55 @@ const startCounting = (element) => {
     updateCounter();
 };
 
+// Intersection Observer for Stats
+const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            stats.forEach(counter => startCounting(counter));
+            statsObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+statsObserver.observe(statsSection);
+
+// Smooth Scroll for Navigation Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+            // Close mobile menu if open
+            navbarCollapse.classList.remove('show');
+        }
+    });
+});
+
+// Feature Cards Animation
+const featureCards = document.querySelectorAll('.feature-card');
+const featureObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        }
+    });
+}, { threshold: 0.2 });
+
+featureCards.forEach(card => featureObserver.observe(card));
+
+// Image Slider Hover Effect
+const slides = document.querySelectorAll('.slide');
+slides.forEach(slide => {
+    slide.addEventListener('mouseenter', () => {
+        slides.forEach(s => s.style.width = '12rem');
+        slide.style.width = '40rem';
+    });
+});
+
+document.querySelector('.slider-container').addEventListener('mouseleave', () => {
+    slides.forEach(slide => slide.style.width = '12rem');
+});
