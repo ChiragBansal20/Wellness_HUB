@@ -495,3 +495,108 @@
       position: relative;
       padding-bottom: 10px;
     }
+    
+    .footer-column h3::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 50px;
+      height: 2px;
+      background-color: var(--primary);
+    }
+    
+    .footer-column ul {
+      list-style: none;
+    }
+    
+    .footer-column li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-column a {
+      color: #bbb;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    
+    .footer-column a:hover {
+      color: var(--primary);
+      padding-left: 5px;
+    }
+    
+    .newsletter-form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .newsletter-form input {
+      flex: 1;
+      min-width: 200px;
+      padding: 12px;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    
+    .newsletter-form button {
+      padding: 12px 20px;
+      background-color: var(--primary);
+      color: var(--white);
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: var(--transition);
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    
+    .newsletter-form button:hover {
+      background-color: var(--primary-dark);
+    }
+    
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 14px;
+      color: #bbb;
+    }
+    
+    /* Sticky CTA for mobile */
+    @media (max-width: 768px) {
+      .sticky-cta {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+        padding: 15px;
+        border-radius: 0;
+      }
+      
+      body {
+        padding-bottom: 60px;
+      }
+      
+      .product-section {
+        grid-template-columns: 1fr;
+      }
+      
+      .header {
+        padding: 15px 0;
+      }
+      
+      .logo {
+        font-size: 24px;
+      }
+      
+      .main-nav ul {
+        gap: 15px;
+      }
+      
+      .main-nav li {
+        margin-left: 15px;
+      }
