@@ -600,3 +600,18 @@
       .main-nav li {
         margin-left: 15px;
       }
+      
+      .product-details h1 {
+        font-size: 28px;
+      }
+    }
+    
+    /* Animation for product details */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .product-details {
+      animation: fadeIn 0.8s ease-out;
+    }
