@@ -90,3 +90,52 @@
     z-index: 1;
     color: var(--gray-300);
   }
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: rgba(18, 18, 18, 0.6);
+  border-radius: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 1;
+  border-left: 3px solid var(--accent);
+}
+
+.info-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.info-icon {
+  margin-right: 1.5rem;
+  font-size: 2rem;
+  color: var(--accent);
+}
+
+.info-content h3 {
+  color: var(--white);
+  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.info-content p {
+  margin-bottom: 0;
+  font-size: 1.4rem;
+  opacity: 0.9;
+  color: var(--gray-300);
+}
+
+.gym-hours {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background-color: rgba(18, 18, 18, 0.6);
+  border-radius: 1rem;
+  position: relative;
+  z-index: 1;
+  border-left: 3px solid var(--accent);
+}
+
