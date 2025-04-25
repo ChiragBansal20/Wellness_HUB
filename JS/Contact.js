@@ -67,3 +67,75 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if (!validateName(nameInput)) isValid = false;
     if (!validateEmail(emailInput)) isValid = false;
+    if (phoneInput.value && !validatePhone(phoneInput)) isValid = false;
+    if (!validateRequired(interestInput, 'Please select your interest')) isValid = false;
+    if (!validateRequired(messageInput, 'Please enter your message')) isValid = false;
+    
+    if (isValid) {
+      // Show loading state
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      
+      // Simulate form submission (normally would be an AJAX call)
+      setTimeout(() => {
+        // Reset form
+        form.reset();
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
+        
+        // Show success modal
+        const successModal = document.getElementById('successModal');
+        if (successModal) {
+          successModal.classList.add('active');
+        }
+      }, 1500);
+    }
+  }
+  
+  // Validation helpers
+  function resetValidation(form) {
+    const inputs = form.querySelectorAll('.input-group');
+    inputs.forEach(input => {
+      input.classList.remove('error');
+      const errorElement = input.querySelector('.error-message');
+      if (errorElement) {
+        errorElement.textContent = '';
+      }
+    });
+  }
+  
+  function showError(input, message) {
+    const inputGroup = input.parentElement;
+    inputGroup.classList.add('error');
+    
+    const errorElement = inputGroup.querySelector('.error-message');
+    if (errorElement) {
+      errorElement.textContent = message;
+    }
+    
+    return false;
+  }
+  
+  function validateRequired(input, message) {
+    if (input.value.trim() === '') {
+      return showError(input, message);
+    }
+    return true;
+  }
+  
+  function validateName(input) {
+    if (input.value.trim() === '') {
+      return showError(input, 'Please enter your name');
+    }
+    
+    if (input.value.trim().length < 2) {
+      return showError(input, 'Name must be at least 2 characters');
+    }
+    
+    return true;
+  }
+  
+  function validateEmail(input) {
+    if (input.value.trim() === '') {
+      return showError(input, 'Please enter your email');
+    }
