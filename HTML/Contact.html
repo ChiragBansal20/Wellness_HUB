@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | FitPro Gym</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/contact.css">
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar container">
+        <div class="logo">
+          <a href="/" class="navbar-brand">
+            <i class="fas fa-dumbbell"></i>
+            <span>Wellness HUB</span>
+          </a>
+        </div>
+        <div class="navbar-collapse">
+          <ul class="navbar-nav">
+              <li class="nav-item">
+                  <a class="nav-link active" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/HTML/About.html">About</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#features">Features</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#trainers">Trainers</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#pricing">Product</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/HTML/contact.html">Contact</a>
+              </li>
+          </ul>
+          <div class="header-right">
+              <span>Call Us!</span>
+              <span class="phone-no">
+                  <i class="fas fa-phone"></i>
+                  +1 234 567 8900
+              </span>
+          </div>
+      </div>
+        <button class="navbar-toggler"><i class="fas fa-bars"></i></button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1 class="hero-title">Ready to Transform?</h1>
+          <p class="hero-subtitle">Take the first step towards your fitness goals. Contact us today!</p>
+        </div>
+      </section>
+<section class="contact-content">
+        <div class="container">
+          <div class="contact-wrapper">
+            <div class="contact-info">
+              <h2>Get In Touch</h2>
+              <p>Have questions about membership, classes, or personal training? We're here to help!</p>
+              <div class="info-item">
+                <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="info-content">
+                  <h3>Location</h3>
+                  <p>123 Fitness Avenue, New York, NY 10001</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                <div class="info-content">
+                  <h3>Email</h3>
+                  <p>info@fitprogym.com</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+                <div class="info-content">
+                  <h3>Phone</h3>
+                  <p>+1 (555) 123-4567</p>
+                </div>
+              </div>
+              <div class="gym-hours">
+                <h3>Hours of Operation</h3>
+                <ul>
+                  <li><span>Monday - Friday:</span> 5:00 AM - 11:00 PM</li>
+                  <li><span>Saturday:</span> 6:00 AM - 10:00 PM</li>
+                  <li><span>Sunday:</span> 7:00 AM - 9:00 PM</li>
+                </ul>
+              </div>
+              <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+              </div>
+            </div>
+            <div class="contact-form-container">
+              <form id="contactForm" class="contact-form">
+                <div class="form-header">
+                  <h2>Start Your Fitness Journey</h2>
+                  <p>Fill out the form below and we'll get back to you within 24 hours.</p>
+                </div>
+                <div class="form-group">
+                  <div class="input-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                    <span class="error-message"></span>
+                  </div>
+                  <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-message"></span>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="phone">Phone</label>
+                  <input type="tel" id="phone" name="phone">
+                  <span class="error-message"></span>
+                </div>
+                <div class="input-group">
+                  <label for="interest">I'm Interested In</label>
+                  <select id="interest" name="interest" required>
+                    <option value="">Select an option</option>
+                    <option value="membership">Gym Membership</option>
+                    <option value="personal">Personal Training</option>
+                    <option value="classes">Group Classes</option>
+                    <option value="trial">Free Trial</option>
+                  </select>
+                  <span class="error-message"></span>
+                </div>
+                <div class="input-group">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" rows="4" required></textarea>
+                  <span class="error-message"></span>
+                </div>
+                <div class="form-footer">
+                  <button type="submit" class="submit-btn">Send Message</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="map-section">
+        <div class="container">
+          <h2 class="section-title">Find Us</h2>
+          <div class="map-container" id="map">
+            <div class="map-placeholder">
+              <p>Loading map...</p>
+            </div>
+          </div>
+          <div class="map-info">
+            <p>123 Fitness Avenue, New York, NY 10001</p>
+            <p>Convenient location with ample parking space</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <div class="container">
+          <div class="cta-content">
+            <h2>Get Fitness Tips & Updates</h2>
+            <p>Subscribe to our newsletter for workout tips, healthy recipes, and exclusive member offers.</p>
+            <form class="newsletter-form">
+              <div class="newsletter-input-group">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer_wrapper">
+      <div class="container">
+        <div class="row">
+          <div>
+            <h5>FitPro</h5>
+            <p class="company_details">Your Journey to a Stronger You</p>
+          </div>
+          <div>
+            <h5>Quick Links</h5>
+            <ul class="link-widget">
+              <li><a href="/classes">Classes</a></li>
+              <li><a href="/trainers">Trainers</a></li>
+              <li><a href="/membership">Membership</a></li>
+              <li><a href="/schedule">Schedule</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5>Support</h5>
+            <ul class="link-widget">
+              <li><a href="/faq">FAQ</a></li>
+              <li><a href="/privacy">Privacy Policy</a></li>
+              <li><a href="/terms">Terms of Service</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright-section">
+          <p>&copy; 2023 <a href="/">FitPro Gym</a>. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="form-success-modal" id="successModal">
+      <div class="modal-content">
+        <div class="success-icon">✓</div>
+        <h3>Message Sent Successfully!</h3>
+        <p>Thank you for contacting us. We'll get back to you shortly.</p>
+        <button id="closeModal" class="close-modal-btn">Close</button>
+      </div>
+    </div>
+
+    <script src="/js/main.js" type="module"></script>
+    <script src="/js/contact.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  </body>
+</html>
