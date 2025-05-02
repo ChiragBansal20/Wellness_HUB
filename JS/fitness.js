@@ -359,3 +359,187 @@ export function setupFitnessWebsite() {
         `;
       });
   
+      html += `
+          </div>
+          <div class="nutrition-tips">
+            <h3 class="section-title">Nutrition Tips</h3>
+            <div class="tips-list">
+      `;
+  
+      nutritionTips.forEach((tip, index) => {
+        html += `
+          <div class="tip-item">
+            <div class="tip-icon">${index + 1}</div>
+            <div class="tip-content">
+              <div class="tip-title">${tip.title}</div>
+              <div class="tip-description">${tip.description}</div>
+            </div>
+          </div>
+        `;
+      });
+  
+      html += `
+            </div>
+          </div>
+        </div>
+      `;
+  
+      return html;
+    }
+  
+    /**
+     * Generate supplements content
+     * @param {string} gender - 'male' or 'female'
+     * @returns {string} HTML content
+     */
+    function generateSupplementsContent(gender) {
+      const isMale = gender === 'male';
+      
+      const supplements = [
+        {
+          title: "Whey Protein",
+          description: isMale 
+            ? "Support muscle growth and recovery with high-quality protein." 
+            : "Aid recovery and support lean muscle development.",
+          image: "https://images.pexels.com/photos/4397833/pexels-photo-4397833.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+          benefits: isMale 
+            ? ["Increases muscle protein synthesis", "Supports recovery after workouts", "Convenient source of complete protein"] 
+            : ["Supports lean muscle tone", "Helps with recovery", "Convenient protein source when on-the-go"]
+        },
+        {
+          title: "Creatine Monohydrate",
+          description: isMale 
+            ? "Enhance strength, power output, and muscle fullness." 
+            : "Support high-intensity exercise and recovery.",
+          image: "https://images.pexels.com/photos/4397840/pexels-photo-4397840.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+          benefits: isMale 
+            ? ["Increases ATP production for power", "Enhances cellular hydration", "Improves strength and performance"] 
+            : ["Supports high-intensity training", "Helps maintain strength", "No bloating or water retention with proper dosage"]
+        },
+        {
+          title: "Omega-3 Fish Oil",
+          description: "Support heart health, reduce inflammation, and improve recovery.",
+          image: "https://images.pexels.com/photos/9419444/pexels-photo-9419444.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+          benefits: ["Reduces inflammation", "Supports joint health", "Improves cardiovascular health"]
+        },
+        {
+          title: isMale ? "Pre-Workout" : "BCAAs",
+          description: isMale 
+            ? "Boost energy, focus, and performance during training." 
+            : "Support muscle recovery and reduce muscle soreness.",
+          image: isMale 
+            ? "https://images.pexels.com/photos/7290089/pexels-photo-7290089.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+            : "https://images.pexels.com/photos/6456279/pexels-photo-6456279.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+          benefits: isMale 
+            ? ["Enhances energy and focus", "Increases blood flow", "Improves exercise performance"] 
+            : ["Reduces muscle soreness", "Supports recovery during training", "Preserves lean muscle tissue"]
+        }
+      ];
+  
+      let html = `
+        <div class="supplements-section">
+          <h2 class="section-title">${isMale ? 'Recommended Supplements for Men' : 'Recommended Supplements for Women'}</h2>
+          <div class="supplements-grid">
+      `;
+  
+      supplements.forEach(supplement => {
+        html += `
+          <div class="supplement-card">
+            <div class="supplement-image">
+              <img src="${supplement.image}" alt="${supplement.title}">
+            </div>
+            <div class="supplement-content">
+              <h3 class="supplement-title">${supplement.title}</h3>
+              <p class="supplement-description">${supplement.description}</p>
+              <div class="supplement-benefits">
+                <div class="supplement-benefits-title">Benefits:</div>
+                <ul class="benefits-list">
+        `;
+  
+        supplement.benefits.forEach(benefit => {
+          html += `<li>${benefit}</li>`;
+        });
+  
+        html += `
+                </ul>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+  
+      html += `
+          </div>
+        </div>
+      `;
+  
+      return html;
+    }
+  
+    /**
+     * Generate success stories content
+     * @param {string} gender - 'male' or 'female'
+     * @returns {string} HTML content
+     */
+    function generateSuccessStories(gender) {
+      const isMale = gender === 'male';
+      
+      const stories = [
+        {
+          name: isMale ? "John D." : "Sarah M.",
+          age: isMale ? 32 : 28,
+          image: isMale 
+            ? "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+            : "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+          testimonial: isMale 
+            ? "I've tried many workout programs before, but FitLifePro's approach was different. The structured progression and nutrition guidance helped me gain 18 pounds of muscle while actually losing fat. The results speak for themselves!" 
+            : "After having my second child, I struggled to get back in shape. FitLifePro's women's program was exactly what I needed - effective workouts I could do at home and nutrition plans that were realistic for my busy schedule.",
+          program: isMale ? "Muscle Building Program" : "Full Body Sculpt",
+          duration: "12 weeks",
+          transformation: isMale ? "Gained 18lbs muscle, lost 7lbs fat" : "Lost 24lbs, gained visible muscle tone"
+        },
+        {
+          name: isMale ? "Michael T." : "Jennifer K.",
+          age: isMale ? 45 : 39,
+          image: isMale 
+            ? "https://images.pexels.com/photos/1599236/pexels-photo-1599236.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+            : "https://images.pexels.com/photos/1671234/pexels-photo-1671234.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+          testimonial: isMale 
+            ? "As I got older, I thought getting in shape was a lost cause. FitLifePro showed me that age is just a number. Their program helped me drop 35 pounds and get stronger than I've been in decades." 
+            : "I always thought intense cardio was the only way to get fit, but FitLifePro's balanced approach with strength training transformed my body more than years of running ever did. I'm stronger, leaner, and more confident!",
+          program: isMale ? "Fat Loss & Conditioning" : "Lean Muscle Toning",
+          duration: "16 weeks",
+          transformation: isMale ? "Lost 35lbs, gained significant strength" : "Lost 18lbs, reduced body fat by 9%"
+        }
+      ];
+  
+      let html = `
+        <div class="success-stories-section">
+          <h2 class="section-title">${isMale ? 'Men\'s Success Stories' : 'Women\'s Success Stories'}</h2>
+          <div class="testimonials">
+      `;
+  
+      stories.forEach(story => {
+        html += `
+          <div class="testimonial">
+            <div class="testimonial-image">
+              <img src="${story.image}" alt="${story.name}">
+            </div>
+            <div class="testimonial-content">
+              <p class="testimonial-text">${story.testimonial}</p>
+              <div class="testimonial-author">${story.name}, ${story.age}</div>
+              <div class="testimonial-meta">Program: ${story.program} | Duration: ${story.duration}</div>
+              <div class="transformation">Results: <span class="transformation-value">${story.transformation}</span></div>
+            </div>
+          </div>
+        `;
+      });
+  
+      html += `
+          </div>
+        </div>
+      `;
+  
+      return html;
+    }
+  }
