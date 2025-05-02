@@ -244,3 +244,118 @@ export function setupFitnessWebsite() {
   
       return html;
     }
+    /**
+     * Generate nutrition content
+     * @param {string} gender - 'male' or 'female'
+     * @returns {string} HTML content
+     */
+    function generateNutritionContent(gender) {
+      const isMale = gender === 'male';
+      
+      const dietPlans = [
+        {
+          title: isMale ? "Muscle Building Diet" : "Lean & Toned Diet",
+          tag: isMale ? "High Protein" : "Balanced Macros",
+          description: isMale 
+            ? "A calorie surplus diet designed to support muscle growth and recovery."
+            : "A balanced approach focused on lean protein and complex carbs to support toning without excess calories.",
+          meals: [
+            { 
+              time: "Breakfast", 
+              title: isMale ? "Protein Oatmeal Bowl" : "Greek Yogurt Parfait", 
+              description: isMale 
+                ? "Oatmeal with whey protein, banana, almond butter, and honey (650 calories)"
+                : "Greek yogurt with berries, honey, and granola (350 calories)" 
+            },
+            { 
+              time: "Mid-Morning", 
+              title: isMale ? "Protein Shake & Nuts" : "Apple with Almond Butter", 
+              description: isMale 
+                ? "30g whey protein with 1 cup milk and a handful of almonds (400 calories)"
+                : "Medium apple with 1 tbsp almond butter (200 calories)" 
+            },
+            { 
+              time: "Lunch", 
+              title: isMale ? "Chicken & Rice Bowl" : "Mediterranean Salad", 
+              description: isMale 
+                ? "8oz grilled chicken, 1 cup brown rice, vegetables, and olive oil (750 calories)"
+                : "Mixed greens, grilled chicken, feta cheese, olives, and balsamic vinaigrette (400 calories)" 
+            },
+            { 
+              time: "Pre-Workout", 
+              title: isMale ? "Banana & Peanut Butter" : "Rice Cakes with Avocado", 
+              description: isMale 
+                ? "1 large banana with 2 tbsp peanut butter (300 calories)"
+                : "2 rice cakes with ¼ avocado (150 calories)" 
+            },
+            { 
+              time: "Dinner", 
+              title: isMale ? "Steak & Sweet Potato" : "Salmon & Quinoa", 
+              description: isMale 
+                ? "8oz steak, large sweet potato, and steamed broccoli (800 calories)"
+                : "5oz salmon fillet, ½ cup quinoa, and roasted vegetables (450 calories)" 
+            }
+          ]
+        }
+      ];
+      
+      const nutritionTips = [
+        {
+          title: isMale ? "Prioritize Protein Intake" : "Balanced Nutrition is Key",
+          description: isMale 
+            ? "Aim for 1.6-2.2g of protein per kg of bodyweight daily to support muscle growth and recovery."
+            : "Focus on getting a balance of lean proteins, complex carbs, and healthy fats with each meal."
+        },
+        {
+          title: isMale ? "Caloric Surplus for Growth" : "Quality Over Quantity",
+          description: isMale 
+            ? "Consume 300-500 calories above maintenance level for optimal muscle building without excessive fat gain."
+            : "Choose nutrient-dense foods rather than focusing solely on calories. Whole foods provide better nutrition."
+        },
+        {
+          title: isMale ? "Time Your Carbs" : "Don't Fear Healthy Fats",
+          description: isMale 
+            ? "Consume most of your carbohydrates around your workout window to fuel performance and recovery."
+            : "Include sources of healthy fats like avocados, nuts, and olive oil to support hormone production."
+        },
+        {
+          title: "Stay Hydrated",
+          description: "Drink at least 3-4 liters of water daily to support metabolism, recovery, and overall health."
+        }
+      ];
+  
+      let html = `
+        <div class="nutrition-section">
+          <h2 class="section-title">${isMale ? 'Men\'s Nutrition Plans' : 'Women\'s Nutrition Plans'}</h2>
+          <div class="diet-plans">
+      `;
+  
+      dietPlans.forEach(plan => {
+        html += `
+          <div class="diet-plan">
+            <div class="diet-plan-header">
+              <h3 class="diet-plan-title">${plan.title}</h3>
+              <span class="diet-plan-tag">${plan.tag}</span>
+            </div>
+            <p class="diet-plan-description">${plan.description}</p>
+            <div class="meal-list">
+        `;
+  
+        plan.meals.forEach(meal => {
+          html += `
+            <div class="meal-item">
+              <div class="meal-time">${meal.time}</div>
+              <div class="meal-details">
+                <div class="meal-title">${meal.title}</div>
+                <div class="meal-description">${meal.description}</div>
+              </div>
+            </div>
+          `;
+        });
+  
+        html += `
+            </div>
+          </div>
+        `;
+      });
+  
