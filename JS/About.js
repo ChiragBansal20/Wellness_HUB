@@ -1,4 +1,3 @@
-
 // BMI Calculator Functionality
 document.addEventListener('DOMContentLoaded', function () {
     const bmiForm = document.getElementById('bmi-form');
