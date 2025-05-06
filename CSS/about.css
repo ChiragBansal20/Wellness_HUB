@@ -497,3 +497,99 @@
             font-size: 0.95rem;
             line-height: 1.6;
         }
+ .price {
+            color: var(--secondary);
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .rating {
+            color: #FFD700;
+            font-size: 0.9rem;
+        }
+
+        .workout-bg {
+            background-color: #111111;
+            padding: 6rem 0;
+            margin: 6rem 0;
+        }
+
+        .workout-plans {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .plan-card {
+            background-color: #222222;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+
+        .plan-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(255, 158, 0, 0.2);
+        }
+
+        .plan-header {
+            padding: 2.5rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .beginner-plan .plan-header {
+            background: linear-gradient(135deg, #FF9E00 0%, #F08700 100%);
+        }
+
+        .intermediate-plan .plan-header {
+            background: linear-gradient(135deg, #FF9E00 0%, #F08700 100%);
+        }
+
+        .advanced-plan .plan-header {
+            background: linear-gradient(135deg, #FF9E00 0%, #F08700 100%);
+        }
+
+        .plan-header::before {
+            content: '';
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            top: -75px;
+            right: -75px;
+        }
+
+        .plan-header h3 {
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .plan-price {
+            color: white;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .plan-period {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+        }
+
