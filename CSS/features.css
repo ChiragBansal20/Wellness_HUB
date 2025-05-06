@@ -583,3 +583,379 @@ p {
   transition: background-color var(--transition-fast), transform var(--transition-fast);
 }
 
+.social-icon:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+.social-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--white);
+}
+
+.copyright {
+  text-align: center;
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--accent-light);
+  color: var(--gray-500);
+  font-size: 0.875rem;
+}
+
+/* Loader */
+.content-loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xl) 0;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid var(--gray-200);
+  border-bottom-color: var(--primary-color);
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Animations */
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
+
+/* Larger Desktop (1200px+) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+  
+  .hero h2 {
+    font-size: 3rem;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+  }
+}
+
+/* Desktop (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* Tablet (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    max-width: 720px;
+  }
+  
+  .hero h2 {
+    font-size: 2.25rem;
+  }
+  
+  .hero p {
+    font-size: 1.125rem;
+  }
+  
+  .workout-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .supplements-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+  
+  .footer-links {
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .testimonial {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .testimonial-image {
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .testimonial-text {
+    padding-left: 0;
+  }
+  
+  .testimonial-text::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Mobile (576px - 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .container {
+    max-width: 540px;
+  }
+  
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--accent-color);
+    box-shadow: var(--shadow-md);
+    padding: var(--spacing-sm) 0;
+  }
+  
+  .main-nav.active {
+    display: block;
+  }
+  
+  .main-nav ul {
+    flex-direction: column;
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .main-nav ul li {
+    width: 100%;
+  }
+  
+  .main-nav ul li a {
+    color: var(--white);
+    display: block;
+    padding: var(--spacing-sm);
+    border-bottom: 1px solid var(--accent-light);
+  }
+  
+  .main-nav ul li:last-child a {
+    border-bottom: none;
+  }
+  
+  .mobile-menu-btn {
+    display: flex;
+  }
+  
+  .hero h2 {
+    font-size: 2rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+  
+  .workout-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .supplements-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .testimonial {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .testimonial-image {
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .testimonial-text {
+    padding-left: 0;
+  }
+  
+  .testimonial-text::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .meal-item {
+    flex-direction: column;
+  }
+  
+  .meal-time {
+    min-width: auto;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+  
+  .footer-links {
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    width: 100%;
+  }
+}
+
+/* Small Mobile (< 576px) */
+@media (max-width: 575px) {
+  .container {
+    width: 100%;
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--accent-color);
+    box-shadow: var(--shadow-md);
+    padding: var(--spacing-sm) 0;
+  }
+  
+  .main-nav.active {
+    display: block;
+  }
+  
+  .main-nav ul {
+    flex-direction: column;
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .main-nav ul li {
+    width: 100%;
+  }
+  
+  .main-nav ul li a {
+    color: var(--white);
+    display: block;
+    padding: var(--spacing-sm);
+    border-bottom: 1px solid var(--accent-light);
+  }
+  
+  .main-nav ul li:last-child a {
+    border-bottom: none;
+  }
+  
+  .mobile-menu-btn {
+    display: flex;
+  }
+  
+  .hero h2 {
+    font-size: 1.75rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+  
+  .gender-tabs {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+  
+  .gender-tab {
+    width: 100%;
+  }
+  
+  .workout-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .supplements-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .testimonial {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: var(--spacing-sm);
+  }
+  
+  .testimonial-image {
+    width: 100px;
+    height: 100px;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .testimonial-text {
+    padding-left: 0;
+    font-size: 0.875rem;
+  }
+  
+  .testimonial-text::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .meal-item {
+    flex-direction: column;
+  }
+  
+  .meal-time {
+    min-width: auto;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+  
+  .footer-links {
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    width: 100%;
+  }
+  
+  .section-nav ul {
+    flex-wrap: wrap;
+  }
+}
+
+
