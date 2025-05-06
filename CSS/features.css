@@ -300,3 +300,257 @@ p {
   opacity: 0;
 }
 
+/* Gender Navigation */
+.gender-navigation {
+  padding: var(--spacing-xl) 0;
+  text-align: center;
+  background-color: var(--gray-100);
+}
+
+.gender-navigation h2 {
+  margin-bottom: var(--spacing-md);
+  font-size: 2rem;
+  color: var(--accent-color);
+}
+
+.gender-tabs {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.gender-tab {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius-md);
+  border: 2px solid transparent;
+  background-color: var(--white);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+}
+
+.gender-tab svg {
+  fill: currentColor;
+}
+
+.gender-tab[data-gender="male"] {
+  color: var(--male-primary);
+}
+
+.gender-tab[data-gender="female"] {
+  color: var(--female-primary);
+}
+
+.gender-tab[data-gender="male"].active {
+  background-color: var(--male-primary);
+  color: var(--white);
+  box-shadow: var(--shadow-md);
+}
+
+.gender-tab[data-gender="female"].active {
+  background-color: var(--female-primary);
+  color: var(--white);
+  box-shadow: var(--shadow-md);
+}
+
+.gender-tab:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Section Navigation */
+.section-nav {
+  margin: var(--spacing-md) 0;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.section-nav ul {
+  display: flex;
+  gap: var(--spacing-md);
+  overflow-x: auto;
+  padding-bottom: var(--spacing-xs);
+  scroll-behavior: smooth;
+}
+
+.section-nav ul li a {
+  display: block;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  color: var(--gray-600);
+  font-weight: 600;
+  position: relative;
+  white-space: nowrap;
+  transition: color var(--transition-fast);
+}
+
+.section-nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--primary-color);
+  transition: width var(--transition-normal);
+}
+
+.section-nav ul li a:hover {
+  color: var(--primary-color);
+}
+
+.section-nav ul li a.active {
+  color: var(--primary-color);
+}
+
+.section-nav ul li a.active::after {
+  width: 100%;
+}
+
+/* Male-specific styling */
+.male-theme .section-nav ul li a.active {
+  color: var(--male-primary);
+}
+
+.male-theme .section-nav ul li a.active::after {
+  background-color: var(--male-primary);
+}
+
+.male-theme .section-nav ul li a:hover {
+  color: var(--male-primary);
+}
+
+/* Female-specific styling */
+.female-theme .section-nav ul li a.active {
+  color: var(--female-primary);
+}
+
+.female-theme .section-nav ul li a.active::after {
+  background-color: var(--female-primary);
+}
+
+.female-theme .section-nav ul li a:hover {
+  color: var(--female-primary);
+}
+
+/* Gender Content Section */
+.gender-content {
+  padding: var(--spacing-lg) 0 var(--spacing-xxl);
+}
+
+#gender-content-container {
+  min-height: 600px;
+}
+
+/* Workout Plans Section */
+.workout-plans-section {
+  margin-top: var(--spacing-lg);
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.section-title {
+  font-size: 1.75rem;
+  margin-bottom: var(--spacing-md);
+  position: relative;
+  padding-bottom: var(--spacing-xs);
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+}
+
+.male-theme .section-title::after {
+  background-color: var(--male-primary);
+}
+
+.female-theme .section-title::after {
+  background-color: var(--female-primary);
+}
+
+.workout-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.workout-card {
+  background-color: var(--white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.workout-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.workout-card-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.workout-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.workout-card:hover .workout-card-image img {
+  transform: scale(1.05);
+}
+
+.workout-card-content {
+  padding: var(--spacing-md);
+}
+
+.workout-card-title {
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-xs);
+  font-weight: 700;
+}
+
+.workout-card-description {
+  color: var(--gray-600);
+  font-size: 0.875rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.workout-meta {
+  display: flex;
+  gap: var(--spacing-sm);
+  font-size: 0.875rem;
+  color: var(--gray-500);
+  margin-bottom: var(--spacing-sm);
+}
+
+.workout-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.workout-meta-item svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.workout-card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--spacing-sm);
+}
