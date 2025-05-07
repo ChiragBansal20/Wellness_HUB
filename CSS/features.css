@@ -554,3 +554,811 @@ p {
   align-items: center;
   margin-top: var(--spacing-sm);
 }
+
+.difficulty-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+.difficulty-beginner {
+  background-color: #E6F4EA;
+  color: #137333;
+}
+
+.difficulty-intermediate {
+  background-color: #FEF7E0;
+  color: #B06000;
+}
+
+.difficulty-advanced {
+  background-color: #FCE8E6;
+  color: #C5221F;
+}
+
+/* Nutrition Section */
+.nutrition-section {
+  margin-top: var(--spacing-xl);
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.diet-plans {
+  margin-top: var(--spacing-md);
+}
+
+.diet-plan {
+  background-color: var(--white);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  box-shadow: var(--shadow-sm);
+  border-left: 4px solid;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.diet-plan:hover {
+  transform: translateX(5px);
+  box-shadow: var(--shadow-md);
+}
+
+.male-theme .diet-plan {
+  border-left-color: var(--male-primary);
+}
+
+.female-theme .diet-plan {
+  border-left-color: var(--female-primary);
+}
+
+.diet-plan-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.diet-plan-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.diet-plan-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  background-color: var(--gray-200);
+  color: var(--gray-700);
+}
+
+.diet-plan-description {
+  margin-bottom: var(--spacing-sm);
+  color: var(--gray-600);
+}
+
+.meal-list {
+  margin-top: var(--spacing-sm);
+}
+
+.meal-item {
+  display: flex;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px dashed var(--gray-200);
+}
+
+.meal-item:last-child {
+  border-bottom: none;
+}
+
+.meal-time {
+  font-weight: 600;
+  min-width: 100px;
+}
+
+.meal-details {
+  flex: 1;
+}
+
+.meal-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.meal-description {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+}
+
+.nutrition-tips {
+  margin-top: var(--spacing-lg);
+}
+
+.tips-list {
+  margin-top: var(--spacing-sm);
+}
+
+.tip-item {
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: flex-start;
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px solid var(--gray-200);
+  transition: transform var(--transition-normal);
+}
+
+.tip-item:hover {
+  transform: translateX(5px);
+}
+
+.tip-item:last-child {
+  border-bottom: none;
+}
+
+.tip-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+.male-theme .tip-icon {
+  background-color: var(--male-primary);
+  color: var(--white);
+}
+
+.female-theme .tip-icon {
+  background-color: var(--female-primary);
+  color: var(--white);
+}
+
+.tip-content {
+  flex: 1;
+}
+
+.tip-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.tip-description {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+}
+
+/* Supplements Section */
+.supplements-section {
+  margin-top: var(--spacing-xl);
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.supplements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.supplement-card {
+  background-color: var(--white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.supplement-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.supplement-image {
+  height: 180px;
+  overflow: hidden;
+}
+
+.supplement-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.supplement-card:hover .supplement-image img {
+  transform: scale(1.05);
+}
+
+.supplement-content {
+  padding: var(--spacing-md);
+}
+
+.supplement-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-xs);
+}
+
+.supplement-description {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  margin-bottom: var(--spacing-sm);
+}
+
+.supplement-benefits {
+  margin-top: var(--spacing-sm);
+}
+
+.supplement-benefits-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.benefits-list {
+  font-size: 0.875rem;
+}
+
+.benefits-list li {
+  margin-bottom: 2px;
+  position: relative;
+  padding-left: 16px;
+}
+
+.benefits-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+}
+
+.male-theme .benefits-list li::before {
+  color: var(--male-primary);
+}
+
+.female-theme .benefits-list li::before {
+  color: var(--female-primary);
+}
+
+/* Success Stories Section */
+.success-stories-section {
+  margin-top: var(--spacing-xl);
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.testimonials {
+  margin-top: var(--spacing-md);
+}
+
+.testimonial {
+  display: flex;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background-color: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--spacing-md);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.testimonial:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.testimonial-image {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.testimonial-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.testimonial:hover .testimonial-image img {
+  transform: scale(1.1);
+}
+
+.testimonial-content {
+  flex: 1;
+}
+
+.testimonial-text {
+  font-style: italic;
+  margin-bottom: var(--spacing-sm);
+  position: relative;
+  padding-left: var(--spacing-sm);
+}
+
+.testimonial-text::before {
+  content: '"';
+  font-size: 2rem;
+  position: absolute;
+  left: -5px;
+  top: -10px;
+  font-family: serif;
+}
+
+.male-theme .testimonial-text::before {
+  color: var(--male-primary);
+}
+
+.female-theme .testimonial-text::before {
+  color: var(--female-primary);
+}
+
+.testimonial-author {
+  font-weight: 600;
+}
+
+.testimonial-meta {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+}
+
+.transformation {
+  margin-top: var(--spacing-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: 0.875rem;
+}
+
+.transformation span {
+  font-weight: 600;
+}
+
+.transformation-value {
+  color: var(--success);
+}
+
+/* Footer styles */
+.main-footer {
+  background-color: var(--accent-color);
+  color: var(--white);
+  padding: var(--spacing-xl) 0 var(--spacing-md);
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-lg);
+}
+
+.footer-logo h2 {
+  font-size: 1.75rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+.footer-logo span {
+  color: var(--primary-color);
+}
+
+.footer-logo p {
+  font-size: 0.875rem;
+  color: var(--gray-400);
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xl);
+}
+
+.footer-column h3 {
+  font-size: 1.125rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--gray-300);
+}
+
+.footer-column ul li {
+  margin-bottom: var(--spacing-xs);
+}
+
+.footer-column ul li a {
+  color: var(--gray-400);
+  transition: color var(--transition-fast);
+}
+
+.footer-column ul li a:hover {
+  color: var(--white);
+}
+
+.social-icons {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background-color: var(--accent-light);
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.social-icon:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+.social-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--white);
+}
+
+.copyright {
+  text-align: center;
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--accent-light);
+  color: var(--gray-500);
+  font-size: 0.875rem;
+}
+
+/* Loader */
+.content-loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xl) 0;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid var(--gray-200);
+  border-bottom-color: var(--primary-color);
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Animations */
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
+
+/* Larger Desktop (1200px+) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+  
+  .hero h2 {
+    font-size: 3rem;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+  }
+}
+
+/* Desktop (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* Tablet (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    max-width: 720px;
+  }
+  
+  .hero h2 {
+    font-size: 2.25rem;
+  }
+  
+  .hero p {
+    font-size: 1.125rem;
+  }
+  
+  .workout-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .supplements-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+  
+  .footer-links {
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .testimonial {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .testimonial-image {
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .testimonial-text {
+    padding-left: 0;
+  }
+  
+  .testimonial-text::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Mobile (576px - 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .container {
+    max-width: 540px;
+  }
+  
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--accent-color);
+    box-shadow: var(--shadow-md);
+    padding: var(--spacing-sm) 0;
+  }
+  
+  .main-nav.active {
+    display: block;
+  }
+  
+  .main-nav ul {
+    flex-direction: column;
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .main-nav ul li {
+    width: 100%;
+  }
+  
+  .main-nav ul li a {
+    color: var(--white);
+    display: block;
+    padding: var(--spacing-sm);
+    border-bottom: 1px solid var(--accent-light);
+  }
+  
+  .main-nav ul li:last-child a {
+    border-bottom: none;
+  }
+  
+  .mobile-menu-btn {
+    display: flex;
+  }
+  
+  .hero h2 {
+    font-size: 2rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+  
+  .workout-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .supplements-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .testimonial {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .testimonial-image {
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .testimonial-text {
+    padding-left: 0;
+  }
+  
+  .testimonial-text::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .meal-item {
+    flex-direction: column;
+  }
+  
+  .meal-time {
+    min-width: auto;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+  
+  .footer-links {
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    width: 100%;
+  }
+}
+
+/* Small Mobile (< 576px) */
+@media (max-width: 575px) {
+  .container {
+    width: 100%;
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--accent-color);
+    box-shadow: var(--shadow-md);
+    padding: var(--spacing-sm) 0;
+  }
+  
+  .main-nav.active {
+    display: block;
+  }
+  
+  .main-nav ul {
+    flex-direction: column;
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .main-nav ul li {
+    width: 100%;
+  }
+  
+  .main-nav ul li a {
+    color: var(--white);
+    display: block;
+    padding: var(--spacing-sm);
+    border-bottom: 1px solid var(--accent-light);
+  }
+  
+  .main-nav ul li:last-child a {
+    border-bottom: none;
+  }
+  
+  .mobile-menu-btn {
+    display: flex;
+  }
+  
+  .hero h2 {
+    font-size: 1.75rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+  
+  .gender-tabs {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+  
+  .gender-tab {
+    width: 100%;
+  }
+  
+  .workout-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .supplements-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .testimonial {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: var(--spacing-sm);
+  }
+  
+  .testimonial-image {
+    width: 100px;
+    height: 100px;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .testimonial-text {
+    padding-left: 0;
+    font-size: 0.875rem;
+  }
+  
+  .testimonial-text::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .meal-item {
+    flex-direction: column;
+  }
+  
+  .meal-time {
+    min-width: auto;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+  
+  .footer-links {
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    width: 100%;
+  }
+  
+  .section-nav ul {
+    flex-wrap: wrap;
+  }
+}
